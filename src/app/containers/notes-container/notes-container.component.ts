@@ -14,7 +14,6 @@ export class NotesContainerComponent implements OnInit {
     {title: 'This is a note', value: 'Code some more', color: 'yellow'},
     {title: 'This is a note', value: 'Check friends', color: 'red'},
     {title: 'This is a note', value: 'Code some more', color: 'blue'},
-    {title: 'This is a note', value: 'Code some more', color: 'blue'}
   ]
 
   onNoteChecked(i) {
