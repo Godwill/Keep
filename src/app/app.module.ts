@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NoteCardComponent } from './note-card/note-card.component';
+import { NoteCardComponent } from './containers/note-card/note-card.component';
 import { AppBarComponent } from './ui/app-bar/app-bar.component';
 import { IndexComponent } from './containers/index/index.component';
 import { NotesContainerComponent } from './containers/notes-container/notes-container.component';
-import { NoteCreatorComponent } from './note-creator/note-creator.component';
+import { NoteCreatorComponent } from './containers/note-creator/note-creator.component';
+import { ColorPickerComponent } from './ui/color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NoteCreatorComponent } from './note-creator/note-creator.component';
     AppBarComponent,
     IndexComponent,
     NotesContainerComponent,
-    NoteCreatorComponent
+    NoteCreatorComponent,
+    ColorPickerComponent
   ],
   imports: [
     BrowserModule,
