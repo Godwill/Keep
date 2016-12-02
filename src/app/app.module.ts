@@ -12,6 +12,10 @@ import { NoteCreatorComponent } from './containers/note-creator/note-creator.com
 import { ColorPickerComponent } from './ui/color-picker/color-picker.component';
 import {ApiService} from "./services/api/api.service";
 import {NoteService} from "./services/notes/note.service";
+import {routes} from "./routes/routes";
+import { AboutComponent } from './containers/about/about.component';
+import { AuthComponent } from './containers/auth/auth.component';
+import {AuthService} from "./services/auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -21,14 +25,17 @@ import {NoteService} from "./services/notes/note.service";
     IndexComponent,
     NotesContainerComponent,
     NoteCreatorComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    AboutComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routes
   ],
-  providers: [ApiService, NoteService],
+  providers: [ApiService, AuthService, NoteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
