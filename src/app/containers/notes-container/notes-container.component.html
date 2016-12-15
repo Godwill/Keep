@@ -1,3 +1,6 @@
+<!--<pre>Store <br> {{ notes$ | async | json}}</pre>-->
+<!--<pre>Store <br> {{ notes$.data | keys }}</pre>-->
+
 <div class="row center-xs notes">
   <div class="col-xs-6 creator">
     <note-creator (createNote)="onCreateNote($event)"></note-creator>
@@ -5,9 +8,9 @@
   <div class="notes col-xs-8">
     <div class="row between-xs">
       <note-card
+        *ngFor="let note of (notes$ | async)"
         class="col-xs-4"
         [note]="note"
-        *ngFor="let note of notes;"
         (checked)="onNoteChecked($event)"
       >
       </note-card>

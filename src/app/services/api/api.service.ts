@@ -17,7 +17,7 @@ export class ApiService {
   constructor(private http: Http) { }
 
   private getJson(res: Response){
-    return res.json();
+    return res.json().data;
   }
 
   private errorHandler(res: Response): Response{
